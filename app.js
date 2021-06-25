@@ -27,6 +27,16 @@ document.addEventListener('keydown', (e) => {
     }
 })
 
+window.addEventListener('wheel', function(e) {
+    if (e.deltaY < 0) {
+        changeSlide('up')
+    }
+    if (e.deltaY > 0) {
+        changeSlide('down')
+    }
+})
+
+
 function changeSlide(direction) {
     if(direction === 'up') {
         activeSlideIndex++
